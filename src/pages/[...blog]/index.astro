@@ -1,19 +1,19 @@
 ---
-import { BLOG } from '~/config.mjs';
+import { NEWS } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
-import SinglePost from '~/components/blog/SinglePost.astro';
-import ToBlogLink from '~/components/blog/ToBlogLink.astro';
+import SinglePost from '~/components/news/SinglePost.astro';
+import ToBlogLink from '~/components/news/ToNewsLink.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
-import { fetchPosts } from '~/utils/blog';
+import { fetchPosts } from '~/utils/news';
 import { findImage } from '~/utils/images';
 
 export async function getStaticPaths() {
-  if (BLOG?.disabled || BLOG?.post?.disabled) return [];
+  if (NEWS?.disabled || NEWS?.post?.disabled) return [];
   return (await fetchPosts()).map((post) => ({
     params: {
-      blog: post.permalink,
+      news: post.permalink,
     },
     props: { post },
   }));
@@ -27,7 +27,7 @@ const meta = {
   description: post.description,
   canonical: post.canonical || url,
   image: await findImage(post.image),
-  noindex: BLOG?.post?.noindex,
+  noindex: NEWS?.post?.noindex,
   ogType: 'article',
 };
 ---
