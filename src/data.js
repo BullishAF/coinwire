@@ -35,7 +35,7 @@ export const headerData = {
       text: 'News',
       href: getBlogPermalink(),
     },
-    },
+    
   
 export const footerData = {
   links: [
