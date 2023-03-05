@@ -1,5 +1,5 @@
 ---
-import { NEWS } from '~/config.mjs';
+import { BLOG } from '~/config.mjs';
 
 import Layout from '~/layouts/PageLayout.astro';
 import SinglePost from '~/components/blog/SinglePost.astro';
@@ -10,7 +10,7 @@ import { fetchPosts } from '~/utils/news';
 import { findImage } from '~/utils/images';
 
 export async function getStaticPaths() {
-  if (NEWS?.disabled || NEWS?.post?.disabled) return [];
+  if (BLOG?.disabled || BLOG?.post?.disabled) return [];
   return (await fetchPosts()).map((post) => ({
     params: {
       news: post.permalink,
