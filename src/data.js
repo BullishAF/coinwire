@@ -5,12 +5,12 @@ export const headerData = {
     {
       text: 'Products',
       links: [
-         {
-      text: 'Newsroom',
-      href: '#',
+        {
+          text: 'Newsroom',
+          href: '#',
         },
         {
-          text: 'Press Release',
+          text: 'Press Releases',
           href: '#',
         },
         {
@@ -18,34 +18,36 @@ export const headerData = {
           href: '#',
         },
         {
-          text: 'Analytics',
+          text: 'Pricing',
           href: '#',
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
         },
       ],
     },
     {
-      text: 'News',
+      text: 'Latest News',
       href: getBlogPermalink(),
     },
-    
+  ],
+  actions: [
+    { type: 'button', text: 'Contact', href: '#' }
+  ],
+};
   
 export const footerData = {
   links: [
+    {
+      title: 'Support',
+      links: [
+        { text: 'Docs', href: '#' },
+        { text: 'Professional Services', href: '#' },
+        { text: 'Database', href: '#' },
+      ],
+    },
     {
       title: 'Company',
       links: [
         { text: 'About', href: '#' },
         { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Pricing', href: '#' },
       ],
     },
   ],
@@ -59,6 +61,6 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
- &copy 2023 coinwire.us | All rights reserved.
+    &copy 2023 🌐 coinwire.us · All rights reserved.
   `,
 };
