@@ -11,7 +11,7 @@ const CONFIG = {
   description:
     'coinwire.us provides news, PR and research services for the digital asset industry',
 
-  defaultImage: 
+  defaultImage: '',
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
