@@ -7,7 +7,7 @@ export const headerData = {
       links: [
          {
       text: 'Newsroom',
-      href: #,
+      href: '#',
         },
         {
           text: 'Press Release',
